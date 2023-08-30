@@ -1,0 +1,1 @@
+dapr run --app-id client -- dotnet run --project ./Client/ --UseDapr --Service service_c --UseDapr

@@ -1,0 +1,1 @@
+dapr run --app-id client -- dotnet run --project ./Client/ --ServicesChain service_a->service_b->service_c --UseDapr

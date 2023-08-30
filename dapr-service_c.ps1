@@ -1,0 +1,1 @@
+dapr run --app-id service_c --app-port 5013 --log-level debug -- dotnet run --project ./Server/ --ServiceName service_c --Port 5013 --UseDapr

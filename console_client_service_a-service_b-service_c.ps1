@@ -1,0 +1,1 @@
+.\Client\bin\Debug\net6.0\Client.exe --ServicesChain service_a->service_b->service_c

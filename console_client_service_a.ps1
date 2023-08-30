@@ -1,0 +1,1 @@
+.\Client\bin\Debug\net6.0\Client.exe --Service service_a

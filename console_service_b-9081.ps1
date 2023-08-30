@@ -1,0 +1,1 @@
+.\Server\bin\Debug\net6.0\Server.exe -n service_b -p 9081
