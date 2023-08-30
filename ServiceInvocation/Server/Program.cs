@@ -74,7 +74,7 @@ try
 
     app.MapPost("/service", async (ServiceInfoRequest request) =>
     {
-        Console.WriteLine($"\n Service {options?.ServiceName}: /service/ with service info:");
+        Console.WriteLine($"\n Service {options?.ServiceName}: /service/ Received Request with service info:");
         Console.WriteLine($"{JsonSerializer.Serialize(request, new JsonSerializerOptions { WriteIndented = true, DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull })}");
 
         ServiceInfoResponse response = new()
@@ -108,7 +108,7 @@ try
             Console.WriteLine($"Calling next service: info.ServiceChains[{request.NextServiceIndexToCall}]= \"{nextService}\" with service info:");
             Console.WriteLine($"{JsonSerializer.Serialize(nextInfo, new JsonSerializerOptions { WriteIndented = true, DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull })}");
 
-            ServiceInfoResponse infoResponse = default;
+            ServiceInfoResponse? infoResponse = default;
 
             if (options.UseDapr)
             {
@@ -139,6 +139,10 @@ try
 
                 response.ServiceChainInfos.Add(infoResponse);
             }
+        }
+        else
+        {
+            Console.WriteLine($"END OF calling chain Service {options?.ServiceName}.");
         }
 
         return response;
