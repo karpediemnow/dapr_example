@@ -1,0 +1,12 @@
+﻿{
+  "profiles": {
+    "Client": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "commandLineArgs": "--Service \"service_a\"",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
